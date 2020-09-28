@@ -1,0 +1,438 @@
+----------------------------------------
+Start of Task 1: Plaintext Detection Testing
+
+Testing load_dictionary:
+Number of words starting with b =  4834
+10th word starting with P =  pacemakers
+100th word starting with j =  jambs
+Last word starting with s =  szechwan
+
+Testing text_to_words:
+plaintext1: ['MOVETHETROOPSSOUTH']
+plaintext2:
+['A', 'Tale', 'of', 'Two', 'Cities', 'by', 'Charles', 'Dickens']
+plaintext3:
+['Python', 'features', 'a', 'dynamic', 'type', 'system', 'and', 'automatic', 'memory', 'management', 'It', 'supports', 'multiple', 'programming', 'paradigms', 'including', 'object-oriented', 'imperative', 'functional', 'and', 'procedural', 'and', 'has', 'a', 'large', 'and', 'comprehensive', 'standard', 'library', '27']
+
+Testing analyze_text:
+Analyzing plaintext2: (8, 0)
+Analyzing plaintext3: (28, 2)
+Analyzing plaintext4: (260, 55)
+Analyzing ciphertext1: (53, 217)
+
+Testing is_plaintext:
+plaintext2 (0.85): True
+plaintext3 (1.10): True
+plaintext3: (0.96) False
+plaintext4: (0.91) False
+plaintext4: (0.82) True
+ciphertext1: (0.7) False
+
+End of Task 1: Plaintext Detection Testing
+----------------------------------------
+
+----------------------------------------
+Start of Task 2: Extended Atbash Testing
+
+-------- Testing Encryption: 
+key = 0
+ciphertext: 
+Pbgslm rh zm rmgvikivgvw srts-ovevo kiltiznnrmt ozmtfztv uli tvmvizo-kfiklhv kiltiznnrmt. 
+Civzgvw yb Gfrwl ezm Rlhhfn zmw urihg ivovzhvw rm 1991, Pbgslm szh z wvhrtm ksrolhlksb gszg vnkszhravh xlwv ivzwzyrorgb, mlgzyob fhrmt hrtmrurxzmg dsrgvhkzxv. 
+Ig kilerwvh xlmhgifxgh gszg vmzyov xovzi kiltiznnrmt lm ylgs hnzoo zmw ozitv hxzovh. [26]
+Pbgslm uvzgfivh z wbmznrx gbkv hbhgvn zmw zfglnzgrx nvnlib nzmztvnvmg. 
+Ig hfkkligh nfogrkov kiltiznnrmt kzizwrtnh, rmxofwrmt lyqvxg-lirvmgvw, rnkvizgrev, ufmxgrlmzo zmw kilxvwfizo, zmw szh z ozitv zmw xlnkivsvmhrev hgzmwziw oryizib. [27]
+Pbgslm rmgvikivgvih ziv zezrozyov uli nzmb lkvizgrmt hbhgvnh. 
+CPbgslm, gsv ivuvivmxv rnkovnvmgzgrlm lu Pbgslm, rh lkvm hlfixv hlugdziv[28] zmw szh z xlnnfmrgb-yzhvw wvevolknvmg nlwvo, zh wl mvziob zoo lu rgh ezirzmg rnkovnvmgzgrlmh. 
+CPbgslm rh nzmztvw yb gsv mlm-kilurg Pbgslm Slugdziv Flfmwzgrlm.
+Pbgslm dzh xlmxvrevw rm gsv ozgv 1980h, [29] zmw rgh rnkovnvmgzgrlm yvtzm rm Dvxvnyvi 1989 [30] yb Gfrwl ezm Rlhhfn zg Cvmgifn Wrhpfmwv & Imulinzgrxz (CWI) rm gsv Nvgsviozmwh zh z hfxxvhhli gl gsv ABC ozmtfztv (rghvou rmhkrivw yb SETL) [31].
+Ig rh xzkzyov lu vcxvkgrlm szmwormt zmw rmgviuzxrmt drgs gsv Anlvyz lkvizgrmt hbhgvn. [7] 
+Vzm Rlhhfn ivnzrmh Pbgslm'h kirmxrkzo zfgsli. Hrh xlmgrmfrmt xvmgizo ilov rm Pbgslm'h wvevolknvmg rh ivuovxgvw rm gsv grgov trevm gl srn yb gsv Pbgslm xlnnfmrgb: Bvmvelovmg Drxgzgli Fli Lruv (BDFL).
+Pbgslm 2.0 dzh ivovzhvw lm 16 Oxglyvi 2000 zmw szw nzmb nzqli mvd uvzgfivh, rmxofwrmt z xbxov-wvgvxgrmt tziyztv xloovxgli zmw hfkklig uli Umrxlwv. 
+Wrgs gsrh ivovzhv, gsv wvevolknvmg kilxvhh yvxznv nliv gizmhkzivmg zmw xlnnfmrgb-yzxpvw. [33]
+Pbgslm 3.0 (rmrgrzoob xzoovw Pbgslm 3000 li kb3p) dzh ivovzhvw lm 3 Dvxvnyvi 2008 zugvi z olmt gvhgrmt kvirlw. 
+Ig rh z nzqli iverhrlm lu gsv ozmtfztv gszg rh mlg xlnkovgvob yzxpdziw-xlnkzgryov drgs kiverlfh evihrlmh. [34] 
+Hldvevi, nzmb lu rgh nzqli uvzgfivh szev yvvm yzxpkligvw gl gsv Pbgslm 2.6.c [35] zmw 2.7.c evihrlm hvirvh, zmw ivovzhvh lu Pbgslm 3 rmxofwv gsv 2gl3 fgrorgb, dsrxs zfglnzgvh gsv gizmhozgrlm lu Pbgslm 2 xlwv gl Pbgslm 3. [36]
+
+hlfixv: drprkvwrz.xln
+
+key = 1
+ciphertext: 
+Kython is an interpreted high-level programming language for general-purpose programming. 
+Xreated by Tuido van Iossum and first released in 1991, Kython has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+Rt provides constructs that enable clear programming on both small and large scales. [26]
+Kython features a dynamic type system and automatic memory management. 
+Rt supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Kython interpreters are available for many operating systems. 
+XKython, the reference implementation of Kython, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+XKython is managed by the non-profit Kython Hoftware Uoundation.
+Kython was conceived in the late 1980s, [29] and its implementation began in Wecember 1989 [30] by Tuido van Iossum at Xentrum Diskunde & Rnformatica (XDR) in the Metherlands as a successor to the ZYX language (itself inspired by HVGO) [31].
+Rt is capable of exception handling and interfacing with the Zmoeba operating system. [7] 
+Ean Iossum remains Kython's principal author. Sis continuing central role in Kython's development is reflected in the title given to him by the Kython community: Yenevolent Wictator Uor Oife (YWUO).
+Kython 2.0 was released on 16 Lctober 2000 and had many major new features, including a cycle-detecting garbage collector and support for Fnicode. 
+Dith this release, the development process became more transparent and community-backed. [33]
+Kython 3.0 (initially called Kython 3000 or py3k) was released on 3 Wecember 2008 after a long testing period. 
+Rt is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+Sowever, many of its major features have been backported to the Kython 2.6.x [35] and 2.7.x version series, and releases of Kython 3 include the 2to3 utility, which automates the translation of Kython 2 code to Kython 3. [36]
+
+source: wikipedia.com
+
+key = 2
+ciphertext: 
+kBGSLM RH ZM RMGVIKIVGVW SRTS-OVEVO KILTIZNNRMT OZMTFZTV ULI TVMVIZO-KFIKLHV KILTIZNNRMT. 
+xIVZGVW YB tFRWL EZM iLHHFN ZMW URIHG IVOVZHVW RM 1991, kBGSLM SZH Z WVHRTM KSROLHLKSB GSZG VNKSZHRAVH XLWV IVZWZYRORGB, MLGZYOB FHRMT HRTMRURXZMG DSRGVHKZXV. 
+rG KILERWVH XLMHGIFXGH GSZG VMZYOV XOVZI KILTIZNNRMT LM YLGS HNZOO ZMW OZITV HXZOVH. [26]
+kBGSLM UVZGFIVH Z WBMZNRX GBKV HBHGVN ZMW ZFGLNZGRX NVNLIB NZMZTVNVMG. 
+rG HFKKLIGH NFOGRKOV KILTIZNNRMT KZIZWRTNH, RMXOFWRMT LYQVXG-LIRVMGVW, RNKVIZGREV, UFMXGRLMZO ZMW KILXVWFIZO, ZMW SZH Z OZITV ZMW XLNKIVSVMHREV HGZMWZIW ORYIZIB. [27]
+kBGSLM RMGVIKIVGVIH ZIV ZEZROZYOV ULI NZMB LKVIZGRMT HBHGVNH. 
+xkBGSLM, GSV IVUVIVMXV RNKOVNVMGZGRLM LU kBGSLM, RH LKVM HLFIXV HLUGDZIV[28] ZMW SZH Z XLNNFMRGB-YZHVW WVEVOLKNVMG NLWVO, ZH WL MVZIOB ZOO LU RGH EZIRZMG RNKOVNVMGZGRLMH. 
+xkBGSLM RH NZMZTVW YB GSV MLM-KILURG kBGSLM hLUGDZIV uLFMWZGRLM.
+kBGSLM DZH XLMXVREVW RM GSV OZGV 1980H, [29] ZMW RGH RNKOVNVMGZGRLM YVTZM RM wVXVNYVI 1989 [30] YB tFRWL EZM iLHHFN ZG xVMGIFN dRHPFMWV & rMULINZGRXZ (xdr) RM GSV mVGSVIOZMWH ZH Z HFXXVHHLI GL GSV zyx OZMTFZTV (RGHVOU RMHKRIVW YB hvgo) [31].
+rG RH XZKZYOV LU VCXVKGRLM SZMWORMT ZMW RMGVIUZXRMT DRGS GSV zNLVYZ LKVIZGRMT HBHGVN. [7] 
+eZM iLHHFN IVNZRMH kBGSLM'H KIRMXRKZO ZFGSLI. sRH XLMGRMFRMT XVMGIZO ILOV RM kBGSLM'H WVEVOLKNVMG RH IVUOVXGVW RM GSV GRGOV TREVM GL SRN YB GSV kBGSLM XLNNFMRGB: yVMVELOVMG wRXGZGLI uLI oRUV (ywuo).
+kBGSLM 2.0 DZH IVOVZHVW LM 16 lXGLYVI 2000 ZMW SZW NZMB NZQLI MVD UVZGFIVH, RMXOFWRMT Z XBXOV-WVGVXGRMT TZIYZTV XLOOVXGLI ZMW HFKKLIG ULI fMRXLWV. 
+dRGS GSRH IVOVZHV, GSV WVEVOLKNVMG KILXVHH YVXZNV NLIV GIZMHKZIVMG ZMW XLNNFMRGB-YZXPVW. [33]
+kBGSLM 3.0 (RMRGRZOOB XZOOVW kBGSLM 3000 LI KB3P) DZH IVOVZHVW LM 3 wVXVNYVI 2008 ZUGVI Z OLMT GVHGRMT KVIRLW. 
+rG RH Z NZQLI IVERHRLM LU GSV OZMTFZTV GSZG RH MLG XLNKOVGVOB YZXPDZIW-XLNKZGRYOV DRGS KIVERLFH EVIHRLMH. [34] 
+sLDVEVI, NZMB LU RGH NZQLI UVZGFIVH SZEV YVVM YZXPKLIGVW GL GSV kBGSLM 2.6.C [35] ZMW 2.7.C EVIHRLM HVIRVH, ZMW IVOVZHVH LU kBGSLM 3 RMXOFWV GSV 2GL3 FGRORGB, DSRXS ZFGLNZGVH GSV GIZMHOZGRLM LU kBGSLM 2 XLWV GL kBGSLM 3. [36]
+
+HLFIXV: DRPRKVWRZ.XLN
+
+key = 3
+ciphertext: 
+uLQcVW bR jW bWQfSUSfQfg cbdc-YfOfY USVdSjXXbWd YjWdPjdf eVS dfWfSjY-UPSUVRf USVdSjXXbWd. 
+7SfjQfg iL 3PbgV OjW sVRRPX jWg ebSRQ SfYfjRfg bW IAAI, uLQcVW cjR j gfRbdW UcbYVRVUcL QcjQ fXUcjRbKfR hVgf SfjgjibYbQL, WVQjiYL PRbWd RbdWbebhjWQ NcbQfRUjhf. 
+1Q USVObgfR hVWRQSPhQR QcjQ fWjiYf hYfjS USVdSjXXbWd VW iVQc RXjYY jWg YjSdf RhjYfR. [HD]
+uLQcVW efjQPSfR j gLWjXbh QLUf RLRQfX jWg jPQVXjQbh XfXVSL XjWjdfXfWQ. 
+1Q RPUUVSQR XPYQbUYf USVdSjXXbWd UjSjgbdXR, bWhYPgbWd ViafhQ-VSbfWQfg, bXUfSjQbOf, ePWhQbVWjY jWg USVhfgPSjY, jWg cjR j YjSdf jWg hVXUSfcfWRbOf RQjWgjSg YbiSjSL. [HC]
+uLQcVW bWQfSUSfQfSR jSf jOjbYjiYf eVS XjWL VUfSjQbWd RLRQfXR. 
+7uLQcVW, Qcf SfefSfWhf bXUYfXfWQjQbVW Ve uLQcVW, bR VUfW RVPShf RVeQNjSf[HB] jWg cjR j hVXXPWbQL-ijRfg gfOfYVUXfWQ XVgfY, jR gV WfjSYL jYY Ve bQR OjSbjWQ bXUYfXfWQjQbVWR. 
+7uLQcVW bR XjWjdfg iL Qcf WVW-USVebQ uLQcVW rVeQNjSf 4VPWgjQbVW.
+uLQcVW NjR hVWhfbOfg bW Qcf YjQf IABJR, [HA] jWg bQR bXUYfXfWQjQbVW ifdjW bW 6fhfXifS IABA [GJ] iL 3PbgV OjW sVRRPX jQ 7fWQSPX nbRZPWgf & 1WeVSXjQbhj (7n1) bW Qcf wfQcfSYjWgR jR j RPhhfRRVS QV Qcf 987 YjWdPjdf (bQRfYe bWRUbSfg iL r5qy) [GI].
+1Q bR hjUjiYf Ve fMhfUQbVW cjWgYbWd jWg bWQfSejhbWd NbQc Qcf 9XVfij VUfSjQbWd RLRQfX. [C] 
+ojW sVRRPX SfXjbWR uLQcVW'R USbWhbUjY jPQcVS. 2bR hVWQbWPbWd hfWQSjY SVYf bW uLQcVW'R gfOfYVUXfWQ bR SfeYfhQfg bW Qcf QbQYf dbOfW QV cbX iL Qcf uLQcVW hVXXPWbQL: 8fWfOVYfWQ 6bhQjQVS 4VS ybef (864y).
+uLQcVW H.J NjR SfYfjRfg VW ID vhQVifS HJJJ jWg cjg XjWL XjaVS WfN efjQPSfR, bWhYPgbWd j hLhYf-gfQfhQbWd djSijdf hVYYfhQVS jWg RPUUVSQ eVS pWbhVgf. 
+nbQc QcbR SfYfjRf, Qcf gfOfYVUXfWQ USVhfRR ifhjXf XVSf QSjWRUjSfWQ jWg hVXXPWbQL-ijhZfg. [GG]
+uLQcVW G.J (bWbQbjYYL hjYYfg uLQcVW GJJJ VS ULGZ) NjR SfYfjRfg VW G 6fhfXifS HJJB jeQfS j YVWd QfRQbWd UfSbVg. 
+1Q bR j XjaVS SfObRbVW Ve Qcf YjWdPjdf QcjQ bR WVQ hVXUYfQfYL ijhZNjSg-hVXUjQbiYf NbQc USfObVPR OfSRbVWR. [GF] 
+2VNfOfS, XjWL Ve bQR XjaVS efjQPSfR cjOf iffW ijhZUVSQfg QV Qcf uLQcVW H.D.M [GE] jWg H.C.M OfSRbVW RfSbfR, jWg SfYfjRfR Ve uLQcVW G bWhYPgf Qcf HQVG PQbYbQL, Ncbhc jPQVXjQfR Qcf QSjWRYjQbVW Ve uLQcVW H hVgf QV uLQcVW G. [GD]
+
+RVPShf: NbZbUfgbj.hVX
+
+key = 4
+ciphertext: 
+;rw812 7x &2 72w"y0y"w"# 8798T4"u"4 0y19y&33729 4&29v&9" !1y 9"2"y&4T0vy01x" 0y19y&33729S 
+|y"&w"# %r ^v7#1 u&2 /1xxv3 &2# !7yxw y"4"&x"# 72 oggoU ;rw812 8&x & #"x792 08741x108r w8&w "308&x7q"x $1#" y"&#&%747wrU 21w&%4r vx729 x7927!7$&2w t87w"x0&$"S 
+\w 0y1u7#"x $12xwyv$wx w8&w "2&%4" $4"&y 0y19y&33729 12 %1w8 x3&44 &2# 4&y9" x$&4"xS JnjH
+;rw812 !"&wvy"x & #r2&37$ wr0" xrxw"3 &2# &vw13&w7$ 3"31yr 3&2&9"3"2wS 
+\w xv001ywx 3v4w704" 0y19y&33729 0&y&#793xU 72$4v#729 1%6"$wT1y7"2w"#U 730"y&w7u"U !v2$w712&4 &2# 0y1$"#vy&4U &2# 8&x & 4&y9" &2# $130y"8"2x7u" xw&2#&y# 47%y&yrS JniH
+;rw812 72w"y0y"w"yx &y" &u&74&%4" !1y 3&2r 10"y&w729 xrxw"3xS 
+|;rw812U w8" y"!"y"2$" 7304"3"2w&w712 1! ;rw812U 7x 10"2 x1vy$" x1!wt&y"JnhH &2# 8&x & $133v27wrT%&x"# #"u"4103"2w 31#"4U &x #1 2"&y4r &44 1! 7wx u&y7&2w 7304"3"2w&w712xS 
+|;rw812 7x 3&2&9"# %r w8" 212T0y1!7w ;rw812 .1!wt&y" _1v2#&w712S
+;rw812 t&x $12$"7u"# 72 w8" 4&w" oghpxU JngH &2# 7wx 7304"3"2w&w712 %"9&2 72 {"$"3%"y oghg JmpH %r ^v7#1 u&2 /1xxv3 &w |"2wyv3 *7x5v2#" a \2!1y3&w7$& Y|*\X 72 w8" ="w8"y4&2#x &x & xv$$"xx1y w1 w8" ~}| 4&29v&9" Y7wx"4! 72x07y"# %r .`-?X JmoHS
+\w 7x $&0&%4" 1! "s$"0w712 8&2#4729 &2# 72w"y!&$729 t7w8 w8" ~31"%& 10"y&w729 xrxw"3S JiH 
++&2 /1xxv3 y"3&72x ;rw812Zx 0y72$70&4 &vw81yS ]7x $12w72v729 $"2wy&4 y14" 72 ;rw812Zx #"u"4103"2w 7x y"!4"$w"# 72 w8" w7w4" 97u"2 w1 873 %r w8" ;rw812 $133v27wrQ }"2"u14"2w {7$w&w1y _1y ?7!" Y}{_?XS
+;rw812 nSp t&x y"4"&x"# 12 oj <$w1%"y nppp &2# 8&# 3&2r 3&61y 2"t !"&wvy"xU 72$4v#729 & $r$4"T#"w"$w729 9&y%&9" $144"$w1y &2# xv001yw !1y ,27$1#"S 
+*7w8 w87x y"4"&x"U w8" #"u"4103"2w 0y1$"xx %"$&3" 31y" wy&2x0&y"2w &2# $133v27wrT%&$5"#S JmmH
+;rw812 mSp Y727w7&44r $&44"# ;rw812 mppp 1y 0rm5X t&x y"4"&x"# 12 m {"$"3%"y npph &!w"y & 4129 w"xw729 0"y71#S 
+\w 7x & 3&61y y"u7x712 1! w8" 4&29v&9" w8&w 7x 21w $1304"w"4r %&$5t&y#T$130&w7%4" t7w8 0y"u71vx u"yx712xS JmlH 
+]1t"u"yU 3&2r 1! 7wx 3&61y !"&wvy"x 8&u" %""2 %&$501yw"# w1 w8" ;rw812 nSjSs JmkH &2# nSiSs u"yx712 x"y7"xU &2# y"4"&x"x 1! ;rw812 m 72$4v#" w8" nw1m vw747wrU t87$8 &vw13&w"x w8" wy&2x4&w712 1! ;rw812 n $1#" w1 ;rw812 mS JmjH
+
+x1vy$"Q t7570"#7&S$13
+
+-------- Testing Decryption: 
+key = 0
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+key = 1
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+key = 2
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+key = 3
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+key = 4
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+-------- Testing Cryptanalysis: 
+key = 0 , Plaintext verified
+key = 1 , Plaintext verified
+key = 2 , Plaintext verified
+key = 3 , Plaintext verified
+key = 4 , Plaintext verified
+
+End of Task 2: Extended Atbash Testing
+----------------------------------------
+
+----------------------------------------
+Start of Task 3: Scytale Cipher Testing
+
+--------- Testing Encryption:
+key = 3
+ciphertext: 
+MESOTSVROEOUTOTHPH
+
+key = 4
+ciphertext: 
+AwyD o iT "caCCkliheetan irsoel"fse.  sTb 
+
+key = 5
+ciphertext: 
+Ptrpayiaertcmrgh maeomit nenia mgvnfo ederp, aya ct rfoumaumradnpenicrsagte gmihaesoe m,nnde asynilintn va.caem
+ln iIudsctd t  ipatsnrnyugodpp caepoer obddsrju yterlsscait tlbem-,rmuo a lraratinynied dpn [ lth2aeea7u ds]tp, .or amoi agml
+
+key = 6
+ciphertext: 
+Psts.ay ws0jtaao oh rrwrode a ny[tsr n2o eia8 rvsm]tei i hlsacaeein n ao tdAsniy Be nphCdotea  fe slo rs antpyan hrs g1eetcu6 teoa lemmgOad mecn au tghnn(ouidiibag tteghaysre-u-e  ltbl2teoaf0hvms 0aeaei0tltdn   i saipcdpnsr eid omvr ngeeehormldataoo d mrpb cmymymoi e amnmnSnpgatEyl n T elamLmtago)aened jlgme[oyuel3r an,1 bgt ]nae.a.ec  s
+wkf
+ I woIdtfarto er   iadgsnst-eue ucnpacroepraemrolpsparya,alt b t-saliip lenbuml clru oleplofu otf dwsi eiiepixnt ltcghpese  r  papopvt rgraiceroroyvagincimra lomanheuimta-snm nd giidev.nmlte gpier
+ lncsCpegtiram ioereannaanngstdtd .eia g dgtia[ minr3bsotb4y,nea]  srg Gi.fe
+un a Hic
+ccodlCiowouPnle dyglvvit eeanhwcrngoit,  nto Ro hrmobi  asjstanse hnyucmed mta  o -nAsfaoamu nrgopidieept edbosfn ar itb tmreyo asd pfjt,teoo  hrrrriea  em tUflpnineeeoniaarngctsa- ouetpsdrdiryee vos.sieft  n,ie
+h  tmWa1f .iv9uP te9ny[h 1ct7 b,th]te io hePon
+inyn Vs taSa bhlonrao f ecnatRlk nwoephdasaoa rssrspeuet r m,eaoF  d cort deuehtednmeosuda  iraidtgatnehnlisve ,o e p nPlPha.yoyin
+tptldPhmho yoeoshtnnnoah't psos 2h n p.ya pr6  wro.tlaicxhasne ar cs[tgcis3 eop 5e nab]macle pne cahdiaana vumdscete iodh 2zm om.epiro7srn.r. e  exchtH  oehitvdnesrees  ar ilcnsrvaosieetnpoa etands ir at1nesba9unein8itrld0n iiasgaetr, nsyd cd,, [e   l2ncani9tonob]rmdtr am aaalurbrn nelydrily. ote  ilyau[te-ss2s bei7 iasn]inc g
+m ko PpPefsylyd itet.Pghmh ynoeo[tinnn3hf t'3oiias]ncnt 
+ atidP3neoey trnvti p ehnwrblocheeonlitgp uteam3derne.ess n0 p it taan (hcr iieeeDsn . e i2 acrtt
+veeioIamfa3tibll  leeluparcytrb t iol1eclve9daii 8 ltdf9ilyeo ne,sr[ d   3t wcm0hPhoa]eyinn  tcsybthht yio ro tnaupGl uceue3ttri 0osadg0m toi0ati v thnveoeaganrst n    s tpteyRoyhnso 3eatshk besi)tlmum resm wa . banc ayssl
+t  leC traaPChetryeeli tn eophtPanrorys onuteog,mhdfr  o  atWnoPmhi nymesc ti ko3hnrum ogenmDn fdue oeenc2nr ie  e&tmcbn yboocI:edten reh fB   ioe2tsmrn0ompme0 alav8Pleto ylmilat ecefhanantont tenda( r  tCD 3liWia.aoIc  rn)tl[g  ao3eoitn6 fnog]s  r 
+cPt t
+ayhFeslteosoeh rtusoN ir.neLnc ,tige[ hf :2ieep 6sr ew] l(ri
+oaBikPpnDoiyedFdptnsL.eh  ) dosa.
+inos
+Ia u Pt.fray cec tioaeshsmt uo uscnaroc  efe2m
+
+-------- Testing Decryption: 
+key = 3
+plaintext: 
+MOVETHETROOPSSOUTH
+
+key = 4
+plaintext: 
+A Tale of Two Cities by "Charles Dickens".
+
+key = 5
+plaintext: 
+Python features a dynamic type system and automatic memory management.
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library [27].
+
+key = 6
+plaintext: 
+Python is an interpreted high-level programming language for general-purpose programming. 
+Created by Guido van Rossum and first released in 1991, Python has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+It provides constructs that enable clear programming on both small and large scales. [26]
+Python features a dynamic type system and automatic memory management. 
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Python interpreters are available for many operating systems. 
+CPython, the reference implementation of Python, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+CPython is managed by the non-profit Python Software Foundation.
+Python was conceived in the late 1980s, [29] and its implementation began in December 1989 [30] by Guido van Rossum at Centrum Wiskunde & Informatica (CWI) in the Netherlands as a successor to the ABC language (itself inspired by SETL) [31].
+It is capable of exception handling and interfacing with the Amoeba operating system. [7] 
+Van Rossum remains Python's principal author. His continuing central role in Python's development is reflected in the title given to him by the Python community: Benevolent Dictator For Life (BDFL).
+Python 2.0 was released on 16 October 2000 and had many major new features, including a cycle-detecting garbage collector and support for Unicode. 
+With this release, the development process became more transparent and community-backed. [33]
+Python 3.0 (initially called Python 3000 or py3k) was released on 3 December 2008 after a long testing period. 
+It is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+However, many of its major features have been backported to the Python 2.6.x [35] and 2.7.x version series, and releases of Python 3 include the 2to3 utility, which automates the translation of Python 2 code to Python 3. [36]
+
+source: wikipedia.com
+
+-------- Testing Cryptanalysis: 
+key = 29 , Plaintext verified
+key = 77 , Plaintext verified
+
+End of Task 3: Scytale Cipher Testing
+----------------------------------------
+
+----------------------------------------
+Start of Task 4: Polybius Square Cipher Testing
+
+-------- Testing get_polybius_square:
+start = "A", size = 5: ABCDEFGHIJKLMNOPQRSTUVWXY
+start = "R", size = 6: RSTUVWXYZ[\]^_`abcdefghijklmnopqrstu
+start = "@", size = 7: @ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnop
+start = "A", size = 5: ABCDEFGHIJKLMNOPQRSTUVWXY
+start = " ", size = 8:  !"#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_
+start = "+", size = 9: +,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{
+start = " ", size = 10: 
+
+-------- Testing Encryption:
+key = ('D', 6)
+ciphertext: 
+24264112 351512 353326263134 3426363515
+
+key = ('A', 7)
+ciphertext: 
+11 36557262 7563 36w75 1366t6662s 56y "136555r7262s 146657716274s".
+
+key = (' ', 8)
+ciphertext: 
+71ython11features11a11dynamic11type11system11and11automatic11memory11management27
+62t11supports11multiple11programming11paradigms2511
+including11object26oriented2511imperative2511functional11and11procedural2511
+and11has11a11large11and11comprehensive11standard11library27
+
+key = ('+', 9)
+ciphertext: 
+59799278 7489868687798577 7875717491 718574 928975849383869391 927179839112 92787597 847191787574 9278757989 957197 92788986937778 927875 9278797382 84937412
+7683869385747589798577 718574 919293847283798577 72759295757585 95787983759112 
+7191 7976 92787597 95758975 76718383798577 9286 877975737591 7192 927875 837189777589 81867985929114 
+3591 8676927585 7191 927875 748979947589 897591927574 92787584 718574 72898693777892 92787584 9286 71 919271857412 
+95799278 71 95718997 "5986137886! 91861378861392787585!" 927875 85757189 837571747589 947986837585928397 9178868682 787991 78757174 718574 75947589979278798577 
+93878685 79921383798275 7185 938593919371838397 7584877871927973 788689917512 74758597798577 92787192 927875 7386717378 7386938374 7275 778692 9387 927875 7879838314 
+5978758575947589 927875 837571747589 84717475 92787991 89719292837512 927875 877191917585777589 9192718992757412 7191 71 85758994869391 877191917585777589 847977789212
+718574 957191 747991929389727574 7985 8479857414
+
+5678758975 957191 71 9192757184798577 84799192 7985 718383 927875 7886838386959112 
+718574 7992 787174 898671847574 7985 799291 7686898386898585759191 9387 927875 7879838312 83798275 7185 75947983 91877989799212 
+91757582798577 89759192 718574 76798574798577 8586857514 35 738371848497 718574 798592758591758397 73868374 8479919212 7992 84717475 799291 91838695 957197 
+92788986937778 927875 717989 7985 89798787837591 92787192 94799179728397 7686838386957574 718574 86947589918789757174 868575 7185869278758912 7191 927875 9571947591
+8676 7185 9385957886837591868475 917571 8479777892 748614 4492 957191 7475859175 758586937778 9286 91789392 869392 75947589979278798577 76898684 927875 8379777892
+8676 927875 7386717378138371848791 729392 9278759175 799291 869585 958689827985779112 718574 71 767595 9771897491 8676 8986717428 718574 927875 89757582
+8676 927875 837172869389798577 788689917591 91927571847574 79859286 799212 7191 7976 92787597 787174 84717475 7992 71838314
+
+Error(e_polybius): invalid polybius square
+key = ('B', 10)
+ciphertext: 
+
+
+-------- Testing Decryption: 
+key = ('D', 6)
+plaintext: 
+MOVE THE TROOPS SOUTH
+
+key = ('A', 7)
+plaintext: 
+A Tale of Two Cities by "Charles Dickens".
+
+key = (' ', 8)
+plaintext: 
+Python features a dynamic type system and automatic memory management.
+It supports multiple programming paradigms, 
+including object-oriented, imperative, functional and procedural, 
+and has a large and comprehensive standard library.
+
+key = ('+', 9)
+plaintext: 
+With drooping heads and tremulous tails, they mashed their way through the thick mud,
+floundering and stumbling between whiles, 
+as if they were falling to pieces at the larger joints. 
+As often as the driver rested them and brought them to a stand, 
+with a wary "Wo-ho! so-ho-then!" the near leader violently shook his head and everything 
+upon it-like an unusually emphatic horse, denying that the coach could be got up the hill. 
+Whenever the leader made this rattle, the passenger started, as a nervous passenger might,
+and was disturbed in mind.
+
+There was a steaming mist in all the hollows, 
+and it had roamed in its forlornness up the hill, like an evil spirit, 
+seeking rest and finding none. A clammy and intensely cold mist, it made its slow way 
+through the air in ripples that visibly followed and overspread one another, as the waves
+of an unwholesome sea might do. It was dense enough to shut out everything from the light
+of the coach-lamps but these its own workings, and a few yards of road; and the reek
+of the labouring horses steamed into it, as if they had made it all.
+
+Error(d_polybius): invalid polybius square
+key = ('B', 10)
+plaintext: 
+
+
+-------- Testing Cryptanalysis: 
+key = ('Q', 6) --> QRSTUVWXYZ[\]^_`abcdefghijklmnopqrst , Plaintext verified
+key = ('#', 9) --> #$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrs , Plaintext verified
+key = ('3', 8) --> 3456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqr , Plaintext verified
+
+End of Task 4: Polybius Square Cipher Testing
+----------------------------------------
+

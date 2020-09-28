@@ -1,0 +1,2 @@
+Python features a dynamic type system and automatic memory management.
+It supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library [27].

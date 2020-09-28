@@ -1,0 +1,41 @@
+The Polybius square, also known as the Polybius checkerboard, is a device invented by the ancient Greeks 
+Cleoxenus and Democleitus, and made famous by the historian and scholar Polybius. 
+The device is used for fractionating plaintext characters so that they can be represented by a smaller set of symbols, 
+which is useful for telegraphy steganography, and cryptography. The device was originally used for fire signalling, 
+allowing for the coded transmission of any message,
+not just a finite amount of predetermined options as was the convention before. 
+
+A key could be used to reorder the alphabet in the square, with the letters (without duplicates) of the key being 
+placed at the beginning with the rest of the alphabet following it in regular order.
+
+In his Histories, Polybius outlines the need for effective signalling in warfare, leading to the development of 
+the square. Previously, fire-signalling was useful only for expected, predetermined messages, 
+with no way to convey novel messages about unexpected events. According to Polybius, in the fourth century BCE, 
+Aeneas Tacticus devised a hydraulic semaphore system consisting of matching vessels with sectioned rods labelled 
+with different messages such as "Heavy Infantry", "Ships", and "Corn". 
+This system was slightly better than the basic fire-signalling, 
+but still lacked the ability to convey any needed message. 
+The Polybius square was used to aid in telegraphy, specifically fire-signalling. 
+To send a message, the sender would initially hold up two torches and wait for the recipient to do the same 
+to signal that they were ready to receive the message. The sender would then hold up the first set of torches on his 
+left side to indicate to the recipient which tablet (or row of the square) was to be consulted. 
+The sender would then raise a set of torches on his right side to indicate which letter on the tablet was 
+intended for the message. Both parties would need the same tablets, a telescope 
+(a tube to narrow view, no real magnification), and torches.
+
+The simple representation also lends itself to steganography. 
+The figures from one to five can be indicated by knots in a string, stitches on a quilt, 
+contiguous letters before a wider space or many other ways.
+
+The Polybius square is also used as a basic cipher called the Polybius Cipher. 
+This cipher is quite insecure by modern standards, as it is a substitution cipher with characters 
+being substituted for pairs of digits, which is easily broken through frequency analysis
+
+The Playfair cipher is a polyalphabetic substitution cipher invented by Charles Wheatstone 
+and promoted by Lyon Playfair based on a five x five square which accommodates the alphabet in a manner 
+similar to the Polybius Square. The letters in the square are arranged by first inserting the 
+letters of a key (without repetition), before the remaining letters (which appear subsequently 
+in normal alphabetical order). A message is divided into pairs of letters, with a filler letter "x" inserted 
+at the end if the message was of odd length. If both letters of a pair are the same, a filler "x" is inserted 
+in between them with an extra "x" inserted at the end of the message to compensate for this. Each pair of 
+letters are then encrypted using the Playfair key Table through "mapping rules"
