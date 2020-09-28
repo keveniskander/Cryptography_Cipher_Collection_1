@@ -38,6 +38,7 @@ def load_dictionary(dict_file):
     line = file1.readline() 
     while line:
         
+        line = line.strip()
         b = alpha.find(line[0])
         dict_list[b].append(line)
 
