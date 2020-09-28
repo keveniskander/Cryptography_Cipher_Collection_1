@@ -37,7 +37,7 @@ def load_dictionary(dict_file):
     a = len(alpha) 
     line = file1.readline() 
     while line:
-        
+
         line = line.strip()
         b = alpha.find(line[0])
         dict_list[b].append(line)
@@ -59,7 +59,10 @@ Asserts:      text is a string
 ---------------------------------------------------
 """
 def text_to_words(text):
-    # your code
+    
+    word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"'))
+    word_list = word_list.split()
+
     return word_list
 
 """
