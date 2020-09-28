@@ -29,7 +29,21 @@ Asserts:      dict_file is a non-empty string
 ---------------------------------------------------
 """
 def load_dictionary(dict_file):
-    # your code
+    
+    alpha = 'abcdefghijklmnopqrstuvwxyz'
+    dict_list = [[] for i in range(len(alpha))]
+    # print(dict_list)
+    file1 = open(dict_file, encoding="ISO-8859-15")
+    a = len(alpha) 
+    line = file1.readline() 
+    while line:
+        
+        b = alpha.find(line[0])
+        dict_list[b].append(line)
+
+        line = file1.readline()
+        
+
     return dict_list
 
 """
