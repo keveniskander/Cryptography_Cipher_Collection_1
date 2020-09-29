@@ -88,10 +88,20 @@ def analyze_text(text, dict_file):
     mismatch = 0
     letter = ''
 
+    # print(len(dict_list[0]))
     for i in range(len(word_list)):
         letter = word_list[i][0]
+        letter = letter.lower()
+        # print(letter)
         number = ord(letter) - 97
-        
+        # print(number)
+        # print(letter)
+        if number>0:
+
+            for j in range(len(dict_list[number])):
+                if dict_list[number][j] == word_list[i].lower():
+                    match+=1
+                    print(dict_list[number][j], word_list[i].lower())
         
 
     # print(dict_list)
