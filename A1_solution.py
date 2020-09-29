@@ -32,10 +32,12 @@ def load_dictionary(dict_file):
     
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     dict_list = [[] for i in range(len(alpha))]
+
     # print(dict_list)
     file1 = open(dict_file, encoding="ISO-8859-15")
     a = len(alpha) 
     line = file1.readline() 
+
     while line:
 
         line = line.strip()
@@ -60,7 +62,7 @@ Asserts:      text is a string
 """
 def text_to_words(text):
     
-    word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"'))
+    word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"', ","))
     word_list = word_list.split()
 
     return word_list
@@ -79,7 +81,21 @@ Asserts:      text and dict_file are both strings
 ---------------------------------------------------
 """
 def analyze_text(text, dict_file):
-    # your code
+    
+    dict_list = load_dictionary(dict_file)
+    word_list = text_to_words(text)
+    match = 0
+    mismatch = 0
+    letter = ''
+
+    for i in range(len(word_list)):
+        letter = word_list[i][0]
+        number = ord(letter) - 97
+        
+        
+
+    # print(dict_list)
+
     return match,mismatch
 
 """
