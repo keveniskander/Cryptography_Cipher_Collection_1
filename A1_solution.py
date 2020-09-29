@@ -62,8 +62,18 @@ Asserts:      text is a string
 """
 def text_to_words(text):
     
-    word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"', ","))
-    word_list = word_list.split()
+    # word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"', ",", "-", "(", ")", "[", "]"))
+    word_list = text.split()
+
+    for a in range(len(word_list)):
+
+        word_list[a] = word_list[a].rstrip("!@#$%^&*()-_=+{}[]:;,.?/`~\|'")
+        word_list[a] = word_list[a].rstrip('"')
+        word_list[a] = word_list[a].lstrip("!@#$%^&*()-_=+{}[]:;,.?/`~\|'")
+        word_list[a] = word_list[a].lstrip('"')
+
+        if word_list[a] == '':
+            word_list[a] = ' '
 
     return word_list
 
@@ -87,25 +97,25 @@ def analyze_text(text, dict_file):
     match = 0
     mismatch = 0
     letter = ''
-
+    # print(word_list)
     # print(len(dict_list[0]))
     for i in range(len(word_list)):
+        # print(word_list[i])
         letter = word_list[i][0]
         letter = letter.lower()
         # print(letter)
         number = ord(letter) - 97
         # print(number)
         # print(letter)
-        if number>0:
+        if number>=0:
 
             for j in range(len(dict_list[number])):
                 if dict_list[number][j] == word_list[i].lower():
                     match+=1
-                    print(dict_list[number][j], word_list[i].lower())
+                    
         
 
-    # print(dict_list)
-
+    mismatch = len(word_list)-match
     return match,mismatch
 
 """
