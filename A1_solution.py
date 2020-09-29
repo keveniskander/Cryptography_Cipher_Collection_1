@@ -134,9 +134,9 @@ Description:  Check if a given file is a plaintext
 def is_plaintext(text, dict_file, threshold=0.9):
 
     match, mismatch = analyze_text(text, dict_file)
-    dict_list = load_dictionary(dict_file)
-
-    if match/len(dict_list) >= threshold and text != '':
+    word_list = text_to_words(text)
+    # print(match/len(word_list))
+    if match/len(word_list) >= threshold and text.strip():
         return True
 
     return False
