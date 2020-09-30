@@ -67,9 +67,9 @@ def text_to_words(text):
 
     for a in range(len(word_list)):
 
-        word_list[a] = word_list[a].rstrip("!@#$%^&*()-_=+{}[]:;,.?/`~\|'")
+        word_list[a] = word_list[a].rstrip("!@#$%^&*()-_=+{[]}:;,.?/`~\|'")
         word_list[a] = word_list[a].rstrip('"')
-        word_list[a] = word_list[a].lstrip("!@#$%^&*()-_=+{}[]:;,.?/`~\|'")
+        word_list[a] = word_list[a].lstrip("!@#$%^&*()-_=+{[]}:;,.?/`~\|'")
         word_list[a] = word_list[a].lstrip('"')
 
         if word_list[a] == '':
