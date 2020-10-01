@@ -215,7 +215,7 @@ Asserts:      ciphertext is a string and key is an integer
 """
 def d_eatbash(ciphertext, key):
     
-    plaintext = ''
+    plaintext = e_eatbash(ciphertext, key)
 
     return plaintext
 
@@ -232,10 +232,23 @@ Asserts:      ciphertext is a string
 """
 def cryptanalysis_eatbash(ciphertext):
     
-    key = 0
-    plaintext = ''
+    if is_plaintext(d_eatbash(ciphertext, key=0), dict_file, threshold=0.8) == True:
+        return 0, d_eatbash(ciphertext, key=0)
 
-    return key,plaintext
+    elif is_plaintext(d_eatbash(ciphertext, key=1), dict_file, threshold=0.8) == True:
+        return 1, d_eatbash(ciphertext, key=1)
+
+    elif is_plaintext(d_eatbash(ciphertext, key=2), dict_file, threshold=0.8) == True:
+        return 2, d_eatbash(ciphertext, key=2)
+
+    elif is_plaintext(d_eatbash(ciphertext, key=3), dict_file, threshold=0.8) == True:
+        return 3, d_eatbash(ciphertext, key=3)
+
+    elif is_plaintext(d_eatbash(ciphertext, key=4), dict_file, threshold=0.8) == True:
+        return 4, d_eatbash(ciphertext, key=4)
+
+    else:
+        return None,''
 
 """
 ----------------------------------------------------
