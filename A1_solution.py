@@ -35,7 +35,7 @@ def load_dictionary(dict_file):
 
     # print(dict_list)
     file1 = open(dict_file, encoding="ISO-8859-15")
-    a = len(alpha) 
+    # a = len(alpha) 
     line = file1.readline() 
 
     while line:
@@ -133,13 +133,14 @@ Description:  Check if a given file is a plaintext
 """
 def is_plaintext(text, dict_file, threshold=0.9):
 
-    match, mismatch = analyze_text(text, dict_file)
-    word_list = text_to_words(text)
+	match, mismatch = analyze_text(text, dict_file)
+	word_list = text_to_words(text)
     # print(match/len(word_list))
-    if match/len(word_list) >= threshold and text.strip():
-        return True
+	if match/len(word_list) >= threshold and text.strip():
+		mismatch = len(word_list) - match
+		return True
 
-    return False
+	return False
 
 """
 ----------------------------------------------------
@@ -162,8 +163,21 @@ Asserts:      plaintext is a string and key is an integer
 ---------------------------------------------------
 """
 def e_eatbash(plaintext, key):
-    # your code
-    return ciphertext
+    
+	assert type(plaintext) == str, 'invalid plaintext'
+	assert type(key) == int, "invalid key"
+
+	alphabet = utilities.get_base('lower')
+	ciphertext = ''
+	for plainchar in plaintext:
+		if plainchar.isalpha():
+			upper= True if plainchar.isupper() else False
+			cipherchar = alphabet[25 - alphabet.index(plainchar.lower())]
+			ciphertext += cipherchar.upper() if upper else cipherchar
+		else:
+			ciphertext += plainchar
+
+	return ciphertext
 
 """
 ----------------------------------------------------
@@ -177,8 +191,10 @@ Asserts:      ciphertext is a string and key is an integer
 ----------------------------------------------------
 """
 def d_eatbash(ciphertext, key):
-    # your code
-    return plaintext
+    
+	plaintext = ''
+
+	return plaintext
 
 """
 ----------------------------------------------------
@@ -192,8 +208,11 @@ Asserts:      ciphertext is a string
 ----------------------------------------------------
 """
 def cryptanalysis_eatbash(ciphertext):
-    # your code
-    return key,plaintext
+    
+	key = 0
+	plaintext = ''
+
+	return key,plaintext
 
 """
 ----------------------------------------------------
@@ -214,8 +233,10 @@ Asserts:      plaintext is a string
 ---------------------------------------------------
 """
 def e_scytale(plaintext, key):
-    # your code
-    return ciphertext
+   
+	ciphertext = ''
+
+	return ciphertext
 
 """
 ----------------------------------------------------
@@ -228,8 +249,10 @@ Asserts:      ciphertext is a string
 ---------------------------------------------------
 """
 def d_scytale(ciphertext, key):
-    # your code
-    return plaintext
+    
+	plaintext = ''
+
+	return plaintext
 
 """
 ----------------------------------------------------
@@ -264,8 +287,10 @@ Asserts:      start is a single character string
 ---------------------------------------------------
 """
 def get_polybius_square(start,size):
-    # your code 
-    return polybius_square
+    
+	polybius_square = ''
+
+	return polybius_square
 
 """--------------------------------------------------------------
 Parameters:   plaintext (str)
@@ -277,8 +302,10 @@ Asserts:      plaintext is a string
 --------------------------------------------------------------
 """
 def e_polybius(plaintext, key):
-    # your code
-    return ciphertext
+    
+	ciphertext = ''
+
+	return ciphertext
 
 """
 -------------------------------------------------------
@@ -291,8 +318,10 @@ Asserts:      ciphertext is a string
 -------------------------------------------------------
 """
 def d_polybius(ciphertext, key):
-    # your code
-    return plaintext
+    
+	plaintext = ''
+
+	return plaintext
 
 """
 ----------------------------------------------------
