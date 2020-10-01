@@ -1,0 +1,18 @@
+Kython is an interpreted high-level programming language for general-purpose programming. 
+Xreated by Tuido van Iossum and first released in 1991, Kython has a design philosophy that emphasizes code readability, notably using significant whitespace. 
+Rt provides constructs that enable clear programming on both small and large scales. [26]
+Kython features a dynamic type system and automatic memory management. 
+Rt supports multiple programming paradigms, including object-oriented, imperative, functional and procedural, and has a large and comprehensive standard library. [27]
+Kython interpreters are available for many operating systems. 
+XKython, the reference implementation of Kython, is open source software[28] and has a community-based development model, as do nearly all of its variant implementations. 
+XKython is managed by the non-profit Kython Hoftware Uoundation.
+Kython was conceived in the late 1980s, [29] and its implementation began in Wecember 1989 [30] by Tuido van Iossum at Xentrum Diskunde & Rnformatica (XDR) in the Metherlands as a successor to the ZYX language (itself inspired by HVGO) [31].
+Rt is capable of exception handling and interfacing with the Zmoeba operating system. [7] 
+Ean Iossum remains Kython's principal author. Sis continuing central role in Kython's development is reflected in the title given to him by the Kython community: Yenevolent Wictator Uor Oife (YWUO).
+Kython 2.0 was released on 16 Lctober 2000 and had many major new features, including a cycle-detecting garbage collector and support for Fnicode. 
+Dith this release, the development process became more transparent and community-backed. [33]
+Kython 3.0 (initially called Kython 3000 or py3k) was released on 3 Wecember 2008 after a long testing period. 
+Rt is a major revision of the language that is not completely backward-compatible with previous versions. [34] 
+Sowever, many of its major features have been backported to the Kython 2.6.x [35] and 2.7.x version series, and releases of Kython 3 include the 2to3 utility, which automates the translation of Kython 2 code to Kython 3. [36]
+
+source: wikipedia.com

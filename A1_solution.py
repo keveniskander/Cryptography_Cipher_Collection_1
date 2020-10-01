@@ -61,16 +61,14 @@ Asserts:      text is a string
 ---------------------------------------------------
 """
 def text_to_words(text):
-    
-    # word_list = "".join(u for u in text if u not in ("?", ".", ";", ":", "!", '"', ",", "-", "(", ")", "[", "]"))
-    word_list = text.split()
 
+    special_char = utilities.get_base('special')
+    word_list = text.split()
     for a in range(len(word_list)):
 
-        word_list[a] = word_list[a].rstrip("!@#$%^&*()-_=+{[]}:;,.?/`~|'")
-        word_list[a] = word_list[a].rstrip('"')
-        word_list[a] = word_list[a].lstrip("!@#$%^&*()-_=+{[]}:;,.?/`~|'")
-        word_list[a] = word_list[a].lstrip('"')
+        if len(word_list[a])>1:
+            word_list[a] = word_list[a].rstrip(special_char)
+            word_list[a] = word_list[a].lstrip(special_char)
 
         if word_list[a] == '':
             word_list[a] = ' '
@@ -133,14 +131,13 @@ Description:  Check if a given file is a plaintext
 """
 def is_plaintext(text, dict_file, threshold=0.9):
 
-	match, mismatch = analyze_text(text, dict_file)
-	word_list = text_to_words(text)
+    match, _ = analyze_text(text, dict_file)
+    word_list = text_to_words(text)
     # print(match/len(word_list))
-	if match/len(word_list) >= threshold and text.strip():
-		mismatch = len(word_list) - match
-		return True
+    if match/len(word_list) >= threshold and text.strip():
+        return True
 
-	return False
+    return False
 
 """
 ----------------------------------------------------
@@ -164,20 +161,35 @@ Asserts:      plaintext is a string and key is an integer
 """
 def e_eatbash(plaintext, key):
     
-	assert type(plaintext) == str, 'invalid plaintext'
-	assert type(key) == int, "invalid key"
+    assert type(plaintext) == str, 'invalid plaintext'
+    assert type(key) == int, "invalid key"
 
-	alphabet = utilities.get_base('lower')
-	ciphertext = ''
-	for plainchar in plaintext:
-		if plainchar.isalpha():
-			upper= True if plainchar.isupper() else False
-			cipherchar = alphabet[25 - alphabet.index(plainchar.lower())]
-			ciphertext += cipherchar.upper() if upper else cipherchar
-		else:
-			ciphertext += plainchar
+    # alphabet = utilities.get_base('lower')
+    ciphertext = ''
+    # word_list = text_to_words(plaintext)
+    # print(alphabet)
 
-	return ciphertext
+    if key < 0 or key > 4:
+        key = key % 5
+
+    if key == 0:
+        alphabet = utilities.get_base('lower')
+    elif key == 1:
+        alphabet = utilities.get_base('upper')
+    elif key == 2:
+        alphabet = utilities.get_base('alpha')
+    elif key == 3:
+        alphabet = utilities.get_base('alphanum')
+    elif key == 4:
+        alphabet = utilities.get_base('all')
+        
+    for i in range(len(plaintext)):
+        if plaintext[i] in alphabet:
+            ciphertext += alphabet[25-alphabet.index(plaintext[i])]
+        else:
+            ciphertext += plaintext[i]
+
+    return ciphertext
 
 """
 ----------------------------------------------------
@@ -192,9 +204,9 @@ Asserts:      ciphertext is a string and key is an integer
 """
 def d_eatbash(ciphertext, key):
     
-	plaintext = ''
+    plaintext = ''
 
-	return plaintext
+    return plaintext
 
 """
 ----------------------------------------------------
@@ -209,10 +221,10 @@ Asserts:      ciphertext is a string
 """
 def cryptanalysis_eatbash(ciphertext):
     
-	key = 0
-	plaintext = ''
+    key = 0
+    plaintext = ''
 
-	return key,plaintext
+    return key,plaintext
 
 """
 ----------------------------------------------------
@@ -234,9 +246,9 @@ Asserts:      plaintext is a string
 """
 def e_scytale(plaintext, key):
    
-	ciphertext = ''
+    ciphertext = ''
 
-	return ciphertext
+    return ciphertext
 
 """
 ----------------------------------------------------
@@ -250,9 +262,9 @@ Asserts:      ciphertext is a string
 """
 def d_scytale(ciphertext, key):
     
-	plaintext = ''
+    plaintext = ''
 
-	return plaintext
+    return plaintext
 
 """
 ----------------------------------------------------
@@ -288,9 +300,9 @@ Asserts:      start is a single character string
 """
 def get_polybius_square(start,size):
     
-	polybius_square = ''
+    polybius_square = ''
 
-	return polybius_square
+    return polybius_square
 
 """--------------------------------------------------------------
 Parameters:   plaintext (str)
@@ -303,9 +315,9 @@ Asserts:      plaintext is a string
 """
 def e_polybius(plaintext, key):
     
-	ciphertext = ''
+    ciphertext = ''
 
-	return ciphertext
+    return ciphertext
 
 """
 -------------------------------------------------------
@@ -319,9 +331,9 @@ Asserts:      ciphertext is a string
 """
 def d_polybius(ciphertext, key):
     
-	plaintext = ''
+    plaintext = ''
 
-	return plaintext
+    return plaintext
 
 """
 ----------------------------------------------------
