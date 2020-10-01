@@ -184,8 +184,19 @@ def e_eatbash(plaintext, key):
         alphabet = utilities.get_base('all')
         
     for i in range(len(plaintext)):
-        if plaintext[i] in alphabet:
+
+        if plaintext[i] in alphabet and (key == 0 or key == 1):
             ciphertext += alphabet[25-alphabet.index(plaintext[i])]
+
+        elif plaintext[i] in alphabet and (key == 2):
+            ciphertext += alphabet[51-alphabet.index(plaintext[i])]
+
+        elif plaintext[i] in alphabet and (key == 3):
+            ciphertext += alphabet[61-alphabet.index(plaintext[i])]
+
+        elif plaintext[i] in alphabet and (key == 4):
+            ciphertext += alphabet[93-alphabet.index(plaintext[i])]
+            
         else:
             ciphertext += plaintext[i]
 
