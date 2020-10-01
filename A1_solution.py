@@ -270,7 +270,26 @@ Asserts:      plaintext is a string
 """
 def e_scytale(plaintext, key):
    
+    col = int(math.ceil(len(plaintext)/key))
+    text_matrix = utilities.new_matrix(key, col, '')
+    count = 0
     ciphertext = ''
+
+    for i in range(key):
+        for j in range(col):
+            # utilities.print_matrix(text_matrix)
+            if count < len(plaintext):
+                text_matrix[i][j] = plaintext[count]
+            count +=1
+
+    # utilities.print_matrix(text_matrix)
+    count = 0
+
+    for k in range(col):
+        for l in range(key):
+            ciphertext += text_matrix[l][k]
+            count+=1
+    
 
     return ciphertext
 
