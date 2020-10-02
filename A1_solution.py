@@ -283,12 +283,10 @@ def e_scytale(plaintext, key):
             count +=1
 
     # utilities.print_matrix(text_matrix)
-    count = 0
 
     for k in range(col):
         for l in range(key):
             ciphertext += text_matrix[l][k]
-            count+=1
     
 
     return ciphertext
@@ -305,7 +303,29 @@ Asserts:      ciphertext is a string
 """
 def d_scytale(ciphertext, key):
     
+    col = int(math.floor(len(ciphertext)/key))
+    text_matrix = utilities.new_matrix(key, col, '')
+    count = 0
     plaintext = ''
+
+    # utilities.print_matrix(text_matrix)   
+
+    for i in range(col):
+        for j in range(key):
+            # utilities.print_matrix(text_matrix)
+            if count < len(ciphertext):
+                text_matrix[j][i] = ciphertext[count]
+                # if count<50: print(count, ciphertext[count])
+            count +=1
+
+    # utilities.print_matrix(text_matrix)
+
+    for k in range(key):
+        for l in range(col):
+            plaintext += text_matrix[k][l]
+            
+
+    print(len(ciphertext), len(plaintext))
 
     return plaintext
 
