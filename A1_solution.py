@@ -346,7 +346,12 @@ Asserts:      ciphertext is a string
 ---------------------------------------------------
 """
 def cryptanalysis_scytale(ciphertext):
-    # your code here
+    
+    for i in range(1,100):
+        text = d_scytale(ciphertext, i)
+        if is_plaintext(text, dict_file, threshold=0.9) == True:
+            return i, text
+
     return None,''
 
 """
