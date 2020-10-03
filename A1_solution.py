@@ -447,7 +447,7 @@ def e_polybius(plaintext, key):
         for j in range(len(get_polybius_square(key[0], key[1]))):
             if polybius[j] == plaintext[i]:
                 ciphertext += str(a) + str(b)
-                found = 1
+    
             a += 1
             if a == total_size:
                 a = 1
