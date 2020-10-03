@@ -30,6 +30,9 @@ Asserts:      dict_file is a non-empty string
 """
 def load_dictionary(dict_file):
     
+    assert type(dict_file) == str, 'invalid dict_file'
+    assert len(dict_file) > 0, 'invalid dict_file'
+
     alpha = 'abcdefghijklmnopqrstuvwxyz'
     dict_list = [[] for i in range(len(alpha))]
 
@@ -62,6 +65,8 @@ Asserts:      text is a string
 """
 def text_to_words(text):
 
+    assert type(text) == str, 'invalid text'
+
     special_char = utilities.get_base('special')
     word_list = text.split()
     for a in range(len(word_list)):
@@ -89,6 +94,9 @@ Asserts:      text and dict_file are both strings
 ---------------------------------------------------
 """
 def analyze_text(text, dict_file):
+
+    assert type(text) == str, 'invalid text'
+    assert type(dict_file) == str, 'invalid dict_file'
     
     dict_list = load_dictionary(dict_file)
     word_list = text_to_words(text)
@@ -214,6 +222,8 @@ Asserts:      ciphertext is a string and key is an integer
 ----------------------------------------------------
 """
 def d_eatbash(ciphertext, key):
+
+    assert type(ciphertext) == str
     
     plaintext = e_eatbash(ciphertext, key)
 
@@ -231,6 +241,8 @@ Asserts:      ciphertext is a string
 ----------------------------------------------------
 """
 def cryptanalysis_eatbash(ciphertext):
+
+    assert type(ciphertext) == str, 'invalid ciphertext'
     
     if is_plaintext(d_eatbash(ciphertext, key=0), dict_file, threshold=0.8) == True:
         return 0, d_eatbash(ciphertext, key=0)
@@ -269,6 +281,10 @@ Asserts:      plaintext is a string
 ---------------------------------------------------
 """
 def e_scytale(plaintext, key):
+
+    assert type(plaintext) == str, 'invalid plaintext'
+    assert type(key) == int, 'invalid key'
+    assert key > 0, 'invalid key'
    
     col = int(math.ceil(len(plaintext)/key))
     text_matrix = utilities.new_matrix(key, col, '')
@@ -304,6 +320,10 @@ Asserts:      ciphertext is a string
 """
 def d_scytale(ciphertext, key):
     
+    assert type(ciphertext) == str, 'invalid ciphertext'
+    assert type(key) == int, 'invalid key'
+    assert key > 0, 'invalid key'
+
     col = int(math.ceil(len(ciphertext)/key))
     text_matrix = utilities.new_matrix(key, col, '')
     count = 0
@@ -347,6 +367,8 @@ Asserts:      ciphertext is a string
 """
 def cryptanalysis_scytale(ciphertext):
     
+    assert type(ciphertext) == str, 'invalid ciphertext'
+
     for i in range(1,100):
         text = d_scytale(ciphertext, i)
         if is_plaintext(text, dict_file, threshold=0.9) == True:
@@ -374,7 +396,24 @@ Asserts:      start is a single character string
 """
 def get_polybius_square(start,size):
     
+    assert type(start) == str, 'invalid start'
+    assert len(start) == 1, 'invalid start'
+    assert type(size) == int, 'invalid size'
+    assert size >= 2, 'invalid size'
+
     polybius_square = ''
+
+    # print(polybius_square)
+    # print(utilities.get_base('special'))
+
+    start_position = polybius_square.find(start)
+    total_size = size * size
+
+    try:
+        for i in range(ord(start),total_size + ord(start)):
+            polybius_square+=chr(i)
+    except:
+        'Error(e_polybius): invalid polybius square'
 
     return polybius_square
 
