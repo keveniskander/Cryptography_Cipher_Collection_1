@@ -504,6 +504,7 @@ def d_polybius(ciphertext, key):
             if a == total_size + 1:
                 a = 1
         if i < len(ciphertext) and ciphertext[i].isdigit() == False:
+            plaintext+=ciphertext[i]
             i +=1
     
 
