@@ -431,7 +431,32 @@ Asserts:      plaintext is a string
 """
 def e_polybius(plaintext, key):
     
+    assert type(plaintext) == str
+    assert type(key) == tuple
+    assert type(key[0]) == str
+    assert len(key[0]) == 1
+    assert type(key[1]) == int
+
     ciphertext = ''
+    polybius = get_polybius_square(key[0], key[1])
+    total_size = key[1]
+    a = 1
+    b = 1
+
+    for i in range(len(plaintext)):
+        for j in range(len(get_polybius_square(key[0], key[1]))):
+            if polybius[j] == plaintext[i]:
+                ciphertext += str(a) + str(b)
+                found = 1
+            a += 1
+            if a == total_size:
+                a = 1
+                b += 1
+            if b == total_size:
+                b = 1
+        if plaintext[i] not in polybius:
+            ciphertext += plaintext[i]
+ 
 
     return ciphertext
 
