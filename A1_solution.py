@@ -139,6 +139,9 @@ Description:  Check if a given file is a plaintext
 """
 def is_plaintext(text, dict_file, threshold=0.9):
 
+    if threshold < 0 or threshold > 1:
+        threshold = 0.9
+
     match, _ = analyze_text(text, dict_file)
     word_list = text_to_words(text)
     # print(match/len(word_list))
@@ -284,7 +287,7 @@ def e_scytale(plaintext, key):
 
     assert type(plaintext) == str, 'invalid plaintext'
     assert type(key) == int, 'invalid key'
-    assert key > 0, 'invalid key'
+    assert key >= 0, 'invalid key'
    
     col = int(math.ceil(len(plaintext)/key))
     text_matrix = utilities.new_matrix(key, col, '')
@@ -546,7 +549,7 @@ def cryptanalysis_polybius(ciphertext,size):
     assert type(size) == int
 
     total_size = size*size
-    polybius = get_polybius_square(' ', size)
+    # polybius = get_polybius_square(' ', size)
     key = '', 0
     text = ''
     plaintext = ''
