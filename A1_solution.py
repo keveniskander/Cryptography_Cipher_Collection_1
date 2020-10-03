@@ -486,11 +486,16 @@ def d_polybius(ciphertext, key):
     a = 1
     b = 1
 
-    for i in range(len(ciphertext)):
+    i = 0
+
+    while i < len(ciphertext):
         for j in range(len(get_polybius_square(key[0], key[1]))):
-            if ciphertext[j].isdigit() and ciphertext[j+1].isdigit() and ciphertext[j] == str(a) and ciphertext[j+1] == str(b):
-                plaintext+=polybius[j]
-                print(str(a), str(b))
+            if (i+1)<len(ciphertext):
+                if ciphertext[i] == str(a) and ciphertext[i+1] == str(b):
+                    plaintext+=polybius[j]
+                    i+=2
+                
+                # print(str(a), str(b))
 
             b += 1
             if b == total_size + 1:
@@ -498,8 +503,8 @@ def d_polybius(ciphertext, key):
                 a += 1
             if a == total_size + 1:
                 a = 1
-        if ciphertext[i] not in polybius:
-            plaintext += ciphertext[i]
+        if i < len(ciphertext) and ciphertext[i].isdigit() == False:
+            i +=1
     
 
     return plaintext
