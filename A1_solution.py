@@ -449,10 +449,10 @@ def e_polybius(plaintext, key):
                 ciphertext += str(a) + str(b)
     
             b += 1
-            if b == total_size:
+            if b == total_size + 1:
                 b = 1
                 a += 1
-            if a == total_size:
+            if a == total_size + 1:
                 a = 1
         if plaintext[i] not in polybius:
             ciphertext += plaintext[i]
