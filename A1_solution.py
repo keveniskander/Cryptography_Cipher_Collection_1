@@ -410,8 +410,11 @@ def get_polybius_square(start,size):
     total_size = size * size
 
     try:
-        for i in range(ord(start),total_size + ord(start)):
-            polybius_square+=chr(i)
+        if total_size + ord(start)<126:
+            for i in range(ord(start),total_size + ord(start)):
+                polybius_square+=chr(i)
+        else:
+            polybius_square = ''
     except:
         'Error(e_polybius): invalid polybius square'
 
