@@ -542,6 +542,48 @@ Asserts:      ciphertext is a string
 """
 def cryptanalysis_polybius(ciphertext,size):
     
+    assert type(ciphertext) == str
+    assert type(size) == int
+
+    total_size = size*size
+    polybius = get_polybius_square(' ', size)
+    key = '', 0
+    text = ''
+    plaintext = ''
+    position = 32
+
+    # for i in range(32,126):
+    #     if total_size + position < 126:
+
+    #         position +=1
+    while position + total_size <=126:
+        position+=1
+
+    # print(position)
+
+    for i in range(32, position):
+        text = d_polybius(ciphertext, (chr(i), size))
+        # print(chr(i))
+        # print(is_plaintext(text, dict_file, threshold=0.93))
+        if is_plaintext(text, dict_file, threshold=0.93) == True:
+
+            key = (chr(i), size)
+            plaintext = text
+            break
+    
+    # print(plaintext)
 
 
-    return None,''
+            # print()
+            # text = d_polybius(ciphertext, (chr(i), size))
+            # if is_plaintext(text, dict_file, threshold=0.93) == True:
+            #     key = (chr(i), size)
+            #     plaintext = text
+
+            
+            # key = polybius[i], size
+            # if is_plaintext(d_polybius(ciphertext, key), dict_file, threshold=0.93) == True:
+            #     return polybius[i], d_polybius(ciphertext, key)
+
+
+    return key,plaintext
