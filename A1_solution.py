@@ -438,7 +438,15 @@ def e_polybius(plaintext, key):
     assert type(key[1]) == int
 
     ciphertext = ''
-    polybius = get_polybius_square(key[0], key[1])
+
+    try:
+        polybius = get_polybius_square(key[0], key[1])
+        if polybius == '':
+            raise ValueError('Error(e_polybius): invalid polybius square')
+            
+    except ValueError as e:
+        print(e)
+
     total_size = key[1]
 
     a = 1
@@ -478,6 +486,14 @@ def d_polybius(ciphertext, key):
     assert type(key[0]) == str
     assert len(key[0]) == 1
     assert type(key[1]) == int
+
+    try:
+        polybius = get_polybius_square(key[0], key[1])
+        if polybius == '':
+            raise ValueError('Error(d_polybius): invalid polybius square')
+            
+    except ValueError as e:
+        print(e)
 
     plaintext = ''
     polybius = get_polybius_square(key[0],key[1])
@@ -525,5 +541,7 @@ Asserts:      ciphertext is a string
 ---------------------------------------------------
 """
 def cryptanalysis_polybius(ciphertext,size):
-    # your code here
+    
+
+
     return None,''
