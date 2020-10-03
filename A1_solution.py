@@ -335,13 +335,13 @@ def d_scytale(ciphertext, key):
     for i in range(col):
         for j in range(key):
             if j == (key-1) and i == (col-1)-unused:
-                # print(unused, key-1, (col-1)-unused)
+                
                 unused-=1
             else:
-        # utilities.print_matrix(text_matrix)
+        
                 if count < len(ciphertext):
                     text_matrix[j][i] = ciphertext[count]
-                    # if count<50: print(count, ciphertext[count])
+                    
                 count +=1
     # print(ciphertext)
     # utilities.print_matrix(text_matrix)
@@ -406,7 +406,7 @@ def get_polybius_square(start,size):
     # print(polybius_square)
     # print(utilities.get_base('special'))
 
-    start_position = polybius_square.find(start)
+
     total_size = size * size
 
     try:
@@ -440,6 +440,7 @@ def e_polybius(plaintext, key):
     ciphertext = ''
     polybius = get_polybius_square(key[0], key[1])
     total_size = key[1]
+
     a = 1
     b = 1
 
@@ -472,7 +473,34 @@ Asserts:      ciphertext is a string
 """
 def d_polybius(ciphertext, key):
     
+    assert type(ciphertext) == str
+    assert type(key) == tuple
+    assert type(key[0]) == str
+    assert len(key[0]) == 1
+    assert type(key[1]) == int
+
     plaintext = ''
+    polybius = get_polybius_square(key[0],key[1])
+    total_size = key[1]
+
+    a = 1
+    b = 1
+
+    for i in range(len(ciphertext)):
+        for j in range(len(get_polybius_square(key[0], key[1]))):
+            if ciphertext[j].isdigit() and ciphertext[j+1].isdigit() and ciphertext[j] == str(a) and ciphertext[j+1] == str(b):
+                plaintext+=polybius[j]
+                print(str(a), str(b))
+
+            b += 1
+            if b == total_size + 1:
+                b = 1
+                a += 1
+            if a == total_size + 1:
+                a = 1
+        if ciphertext[i] not in polybius:
+            plaintext += ciphertext[i]
+    
 
     return plaintext
 
