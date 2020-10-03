@@ -573,20 +573,6 @@ def cryptanalysis_polybius(ciphertext,size):
             key = (chr(i), size)
             plaintext = text
             break
-    
-    # print(plaintext)
-
-
-            # print()
-            # text = d_polybius(ciphertext, (chr(i), size))
-            # if is_plaintext(text, dict_file, threshold=0.93) == True:
-            #     key = (chr(i), size)
-            #     plaintext = text
-
-            
-            # key = polybius[i], size
-            # if is_plaintext(d_polybius(ciphertext, key), dict_file, threshold=0.93) == True:
-            #     return polybius[i], d_polybius(ciphertext, key)
 
 
     return key,plaintext
